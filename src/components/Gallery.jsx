@@ -1,33 +1,25 @@
-  const items = [
-    {
-      userId: 1,
-      id: 1,
-      title: "i am hungry",
-      completed: false,
-    },
-    {
-      userId: 1,
-      id: 2,
-      title: "what to eat",
-      completed: false,
-    },
-    {
-      userId: 1,
-      id: 3,
-      title: "i want sushi",
-      completed: false,
-    },
-  ];
+import { useEffect, useState } from "react";
 
 export default function Gallery() {
+  const [photos, setPhotos] = useState([]);
+
+  useEffect(() => { {/* you only want to fecth data once, when the component first loads */}
+    async function fetchData() {
+      const response = await fetch("https://week-6-api.vercel.app/api/images");
+      const data = await response.json();
+      setPhotos(data);
+    }
+    fetchData();
+  }, []); {/* dependency array // runs the effect only once after the component's first render*/}
+
   return (
     <div>
-        <h1>Items</h1>
-        <ul>
-            {items.map((item) => (
-                <li key={item.id}>{item.title}</li>
-            ))}
-        </ul>
+      <h1>Photos</h1>
+      <ul>
+        {photos.map((photo) => (
+          <li key={photo.id}>{photo.title}</li>
+        ))}
+      </ul>
     </div>
-  )
+  );
 }
