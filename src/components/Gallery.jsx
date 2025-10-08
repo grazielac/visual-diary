@@ -28,7 +28,7 @@ export default function Gallery() {
                 src={photo.url}
               ></img>
               {/* deafult: opacity-0 // group-hover: shows when the parents wrapper is hovered*/}
-              <button className="absolute top-2 right-2 opacity-0 transition-opacity group-hover:opacity-100">Save</button>
+              <button className="h-12 w-12 bg-amber-200 rounded-xl cursor-pointer absolute top-2 right-2 opacity-0 transition-opacity group-hover:opacity-100">Save</button>
             </div>
           ))}
         </ul>
