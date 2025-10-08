@@ -14,7 +14,7 @@ export default function Header() {
       {/* right: profile + search + etc */}
       <div>
         <img src={Search} alt="Search Icon" className="h-7 m-4" />
-        <img src="https://www.flaticon.com/free-icons/chat-box" alt="Search Icon" className="h-7 m-4" />
+        <FaSearch className="h-7 m-4 text-gray-50" />
       </div>
     </header>
   );
