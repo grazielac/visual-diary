@@ -13,19 +13,29 @@ export default function Header() {
       {/* left: logo + home feed */}
       <div className="flex justify-between items-center ml-10">
         <img src={Vd} alt="Site Logo" className="h-10 m-4 mr-8 cursor-pointer" />
-        <div className="flex justify-between items-center cursor-pointer hover:bg-amber-300 hover:rounded-xl">
-          <a href="#" className="text-sm pl-4 mt-0">Home Feed</a>
-          <SlMenu className="h-7 m-4 mt-0 pt-4 text-black-50" />
+        <div className="sm:p-2 flex justify-between items-center cursor-pointer hover:bg-amber-200 hover:rounded-xl">
+          <a href="#" className="text-sm pl-4 pr-4 mt-0">Home Feed</a>
+          <SlMenu className="h-6 w-6 text-black-50" />
         </div>
       </div>
       {/* right: profile + search + etc */}
       {/* source: react-icons.github.io */}
-      <div className="flex mr-10">
-        <SlMagnifier href="#" className="h-7 m-4 text-black-50 cursor-pointer" />
-        <SlBell href="#" className="h-7 m-4 text-black-50 cursor-pointer" />
-        <SlBubble href="#" className="h-7 m-4 text-black-50 cursor-pointer" />
-        <SlUser href="#" className="h-7 m-4 text-black-50 cursor-pointer" />
-        <SlArrowDown href="#" className="h-7 m-4 text-black-50 cursor-pointer" />
+      <div className="flex mr-10 p-5">
+        <div className="sm:p-2 h-12 w-12 hover:bg-amber-200 hover:rounded-xl flex items-center justify-center">
+          <SlMagnifier href="#" className="h-6 w-6 text-black-50 cursor-pointer" />
+        </div>
+        <div className="sm:p-2 h-12 w-12 hover:bg-amber-200 hover:rounded-xl flex items-center justify-center">
+          <SlBell href="#" className="h-6 w-6 text-black-50 cursor-pointer" />
+        </div>
+        <div className="sm:p-2 h-12 w-12 hover:bg-amber-200 hover:rounded-xl flex items-center justify-center">
+          <SlBubble href="#" className="h-6 w-6 text-black-50 cursor-pointer" />
+        </div>
+        <div className="sm:p-2 h-12 w-12 hover:bg-amber-200 hover:rounded-xl flex items-center justify-center">
+          <SlUser href="#" className="h-6 w-6 text-black-50 cursor-pointer" />
+        </div>
+        <div className="sm:p-2 h-12 w-12 hover:bg-amber-200 hover:rounded-xl flex items-center justify-center">
+          <SlArrowDown href="#" className="h-6 w-6 text-black-50 cursor-pointer" />
+        </div>
       </div>
     </header>
   );
