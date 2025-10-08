@@ -17,12 +17,21 @@ export default function Gallery() {
   return (
     <div className="m-4">
       <h1 className="mb-15 underline text-center">Photos</h1>
-      <ul className="grid grid-cols-4 md:grid-cols-3 gap-4 grid-rows-">
-        {photos.map((photo) => (
-          /* for each photo, render an img with its src and key to id*/
-          <img className="object-cover w-full border rounded-xl" key={photo.id} src={photo.url}></img>
-        ))}
-      </ul>
+      <div className="relative">
+        <ul className="grid grid-cols-4 md:grid-cols-3 gap-4 grid-rows-">
+          {photos.map((photo) => (
+            /* for each photo, render an img with its src and key to id*/
+            <div className="relative group-hover:shadow-lg">
+              <img
+                className="object-cover w-full rounded-xl transition duration-75"
+                key={photo.id}
+                src={photo.url}
+              ></img>
+              <button>Save</button>
+            </div>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
