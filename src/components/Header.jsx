@@ -1,10 +1,12 @@
 import Vd from "../assets/vd.png";
-import Search from "../assets/search.png";
-import { FaSearch } from "react-icons/fa";
+import { SlBubble } from "react-icons/sl";
+import { SlBell } from "react-icons/sl";
+import { SlMagnifier } from "react-icons/sl";
+import { SlUser } from "react-icons/sl";
 
 export default function Header() {
   return (
-    <header className="bg-amber-400 flex items-center">
+    <header className="bg-amber-400 flex justify-between items-center">
 
       {/* left: logo + home feed */}
       <div className="flex justify-between items-center">
@@ -12,9 +14,12 @@ export default function Header() {
         <a href="#" className="hover:underline mr-4 text-sm">Home Feed</a>
       </div>
       {/* right: profile + search + etc */}
-      <div>
-        <img src={Search} alt="Search Icon" className="h-7 m-4" />
-        <FaSearch className="h-7 m-4 text-gray-50" />
+      <div className="flex">
+        <SlMagnifier href="#" className="h-7 m-4 text-black-50" />
+        <SlBell href="#" className="h-7 m-4 text-black-50" />
+        <SlBubble href="#" className="h-7 m-4 text-black-50" />
+        <SlUser href="#" className="h-7 m-4 text-black-50" />
+
       </div>
     </header>
   );
