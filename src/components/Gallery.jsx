@@ -16,7 +16,7 @@ export default function Gallery() {
   console.log(photos);
   return (
     <div className="m-4">
-      <h1 className="mb-15 underline text-center">Photos</h1>
+      <h1 className="mb-15 underline text-center cursor-pointer">Photos</h1>
       <div className="relative">
         <ul className="grid grid-cols-4 md:grid-cols-3 gap-4 grid-rows-">
           {photos.map((photo) => (
@@ -28,7 +28,9 @@ export default function Gallery() {
                 src={photo.url}
               ></img>
               {/* deafult: opacity-0 // group-hover: shows when the parents wrapper is hovered*/}
-              <button className="h-12 w-12 bg-amber-200 rounded-xl cursor-pointer absolute top-2 right-2 opacity-0 transition-opacity group-hover:opacity-100">Save</button>
+              <button className="mt-2 mr-2 h-12 w-17 bg-amber-200 rounded-2xl cursor-pointer absolute top-2 right-2 opacity-0 transition-opacity group-hover:opacity-100">
+                Save
+              </button>
             </div>
           ))}
         </ul>
