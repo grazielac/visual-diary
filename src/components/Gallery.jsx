@@ -21,13 +21,14 @@ export default function Gallery() {
         <ul className="grid grid-cols-4 md:grid-cols-3 gap-4 grid-rows-">
           {photos.map((photo) => (
             /* for each photo, render an img with its src and key to id*/
-            <div className="relative group-hover:shadow-lg">
+            <div className="relative group transition duration-200">
               <img
-                className="object-cover w-full rounded-xl transition duration-75"
+                className="object-cover w-full rounded-xl transition duration-200 group-hover:shadow-lg"
                 key={photo.id}
                 src={photo.url}
               ></img>
-              <button>Save</button>
+              {/* deafult: opacity-0 // group-hover: shows when the parents wrapper is hovered*/}
+              <button className="absolute top-2 right-2 opacity-0 transition-opacity group-hover:opacity-100">Save</button>
             </div>
           ))}
         </ul>
