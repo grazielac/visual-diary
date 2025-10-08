@@ -24,7 +24,7 @@ export default function Gallery() {
       <h1>Photos</h1>
       <ul>
         {photos.map((photo) => (
-          <li key={photo.id}>{photo.url}</li>
+          <img key={photo.id} src={photo.url}></img>
         ))}
       </ul>
     </div>
