@@ -2,15 +2,11 @@ import Gallery from "./Gallery";
 import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import { useState } from "react";
 
-export default function GalleryItem({ photo, close }) {
+export default function GalleryItem({ close }) {
   let [isOpen, setIsOpen] = useState(true);
 
   function open() {
     setIsOpen(true);
-  }
-
-  function close() {
-    setIsOpen(false);
   }
 
   return (
@@ -22,12 +18,16 @@ export default function GalleryItem({ photo, close }) {
         Open dialog
       </Button>
 
-      <Dialog onClick={open} onClose={close} className="relative z-50">
-        <DialogPanel className="bg-amber-300">
-          <div className="w-screen">
+      <Dialog open={isOpen} onClose={close} className="relative z-50">
+        <div className="bg-amber-200">
+          <DialogPanel className="bg-amber-300 p-12">
+            <DialogTitle className="text-lg"></DialogTitle>
             <p>HELLO WORLD</p>
-          </div>
-        </DialogPanel>
+            <div>
+              <button onClick={() => setIsOpen(false)}>Close</button>
+            </div>
+          </DialogPanel>
+        </div>
       </Dialog>
     </>
   );
