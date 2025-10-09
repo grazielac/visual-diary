@@ -1,25 +1,18 @@
 import Gallery from "./Gallery";
 import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
-import { useState } from "react";
 import { SlArrowLeft, SlHeart } from "react-icons/sl";
 import { SlBubble } from "react-icons/sl";
 
-export default function GalleryItem({ selectedPhoto }) {
-  let [isOpen, setIsOpen] = useState(true);
-
+export default function GalleryItem({ selectedPhoto, close }) {
   return (
     <>
-      <Dialog
-        open={isOpen}
-        onClose={() => setIsOpen(false)}
-        className="relative z-50"
-      >
+      <Dialog open={true} onClose={close} className="relative z-50">
         <div className="fixed inset-20 p-6 bg-amber-50 border-1 rounded-3xl overflow-y-auto">
           <DialogPanel className="bg-amber-100 h-full p-0 rounded-3xl">
             <div className="flex justify-between items-center">
               <div className="flex">
                 <div
-                  onClick={() => setIsOpen(false)}
+                  onClick={close}
                   className="sm:p-2 h-12 w-12 mr-8 hover:bg-amber-200 hover:rounded-xl flex items-center justify-center"
                 >
                   <SlArrowLeft

@@ -35,7 +35,7 @@ export default function Gallery() {
               key={photo.id}
             >
               <img
-                //   onClick={() => setSelectedPhoto(photo)}
+                onClick={() => setSelectedPhoto(photo)}
                 className="cursor-pointer object-cover w-full rounded-xl transition duration-200 group-hover:shadow-lg"
                 src={photo.urls.small}
                 alt={photo.alt_description}
@@ -54,11 +54,11 @@ export default function Gallery() {
       </div>
       {/* conditionally render galleryitem */}
       {selectedPhoto && (
-          <GalleryItem
-            photo={selectedPhoto}
-            close={() => setSelectedPhoto(null)}
-          />
-        )}
+        <GalleryItem
+          selectedPhoto={selectedPhoto}
+          close={() => setSelectedPhoto(null)}
+        />
+      )}
     </div>
   );
 }
