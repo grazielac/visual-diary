@@ -6,10 +6,10 @@ export default function GalleryItem({ selectedPhoto, onCloseDialog }) {
   return (
     <>
       <Dialog open={true} onClose={onCloseDialog} className="relative z-50">
-        <DialogPanel className="fixed inset-20 border-1 overflow-y-auto bg-amber-100 h-full p-0 rounded-3xl">
-          <div className="flex justify-between items-center">
+        <DialogPanel className="fixed inset-20 border-1 overflow-y-auto bg-amber-50 h-full rounded-3xl">
+          <div className="flex justify-between items-center mt-8 mr-10 ml-10">
             <div className="flex">
-              <div 
+              <div
                 onClick={onCloseDialog}
                 className="sm:p-2 h-12 w-12 mr-8 hover:bg-amber-200 hover:rounded-xl flex items-center justify-center"
               >
@@ -24,22 +24,23 @@ export default function GalleryItem({ selectedPhoto, onCloseDialog }) {
             </div>
             <button
               onClick={() => console.log("Save me!")}
-              className="mt-2 mr-2 h-12 w-16 bg-amber-200 rounded-2xl cursor-pointer hover:bg-amber-300"
+              className="h-12 w-16 bg-amber-200 rounded-2xl cursor-pointer hover:bg-amber-300"
             >
               Save
             </button>
           </div>
 
-          <DialogTitle className="text-lg">HELLO</DialogTitle>
-          <img
-            src={selectedPhoto?.urls?.small}
-            alt={selectedPhoto?.alt_description}
-          ></img>
-          
+          <DialogTitle className="text-lg"></DialogTitle>
+          <div className="flex justify-center">
+            <img
+              className="w-6/12 rounded-3xl"
+              src={selectedPhoto?.urls?.small}
+              alt={selectedPhoto?.alt_description}
+            ></img>
+          </div>
         </DialogPanel>
       </Dialog>
     </>
-
   );
 }
 // console.log("onCloseDialog is:", typeof onCloseDialog);
