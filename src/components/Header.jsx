@@ -1,5 +1,5 @@
 import Vd from "../assets/vd.png";
-import { SlBubble } from "react-icons/sl";
+import { SlPaperPlane } from "react-icons/sl";
 import { SlBell } from "react-icons/sl";
 import { SlMagnifier } from "react-icons/sl";
 import { SlUser } from "react-icons/sl";
@@ -28,7 +28,7 @@ export default function Header() {
           <SlBell href="#" className="h-6 w-6 text-black-50 cursor-pointer" />
         </div>
         <div className="sm:p-2 h-12 w-12 hover:bg-amber-200 hover:rounded-xl flex items-center justify-center">
-          <SlBubble href="#" className="h-6 w-6 text-black-50 cursor-pointer" />
+          <SlPaperPlane href="#" className="h-6 w-6 text-black-50 cursor-pointer" />
         </div>
         <div className="sm:p-2 h-12 w-12 hover:bg-amber-200 hover:rounded-xl flex items-center justify-center">
           <SlUser href="#" className="h-6 w-6 text-black-50 cursor-pointer" />
