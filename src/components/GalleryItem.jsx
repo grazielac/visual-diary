@@ -4,7 +4,7 @@ import { useState } from "react";
 import { SlArrowLeft, SlHeart } from "react-icons/sl";
 import { SlBubble } from "react-icons/sl";
 
-export default function GalleryItem() {
+export default function GalleryItem({ selectedPhoto }) {
   let [isOpen, setIsOpen] = useState(true);
 
   return (
@@ -14,8 +14,8 @@ export default function GalleryItem() {
         onClose={() => setIsOpen(false)}
         className="relative z-50"
       >
-        <div className="fixed inset-20 p-6 bg-amber-50 border-1 rounded-3xl">
-          <DialogPanel className="bg-amber-100 h-full p-0  rounded-3xl">
+        <div className="fixed inset-20 p-6 bg-amber-50 border-1 rounded-3xl overflow-y-auto">
+          <DialogPanel className="bg-amber-100 h-full p-0 rounded-3xl">
             <div className="flex justify-between items-center">
               <div className="flex">
                 <div
@@ -46,6 +46,11 @@ export default function GalleryItem() {
             </div>
 
             <DialogTitle className="text-lg">HELLO</DialogTitle>
+            <img
+              className=""
+              src={selectedPhoto.urls.regular}
+              alt={selectedPhoto.alt_description}
+            ></img>
           </DialogPanel>
         </div>
       </Dialog>
