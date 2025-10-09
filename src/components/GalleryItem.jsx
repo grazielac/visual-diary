@@ -6,7 +6,7 @@ import { SlBubble } from "react-icons/sl";
 export default function GalleryItem({ selectedPhoto, close }) {
   return (
     <>
-      <Dialog open={true} onClose={close} className="relative z-50">
+      <Dialog open={true} onClose={() => setSelectedPhoto(null)} className="relative z-50">
         <div className="fixed inset-20 p-6 bg-amber-50 border-1 rounded-3xl overflow-y-auto">
           <DialogPanel className="bg-amber-100 h-full p-0 rounded-3xl">
             <div className="flex justify-between items-center">
@@ -41,8 +41,8 @@ export default function GalleryItem({ selectedPhoto, close }) {
             <DialogTitle className="text-lg">HELLO</DialogTitle>
             <img
               className=""
-              src={selectedPhoto.urls.regular}
-              alt={selectedPhoto.alt_description}
+              src={selectedPhoto?.urls?.small}
+              alt={selectedPhoto?.alt_description}
             ></img>
           </DialogPanel>
         </div>

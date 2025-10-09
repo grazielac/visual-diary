@@ -14,13 +14,17 @@ export default function Gallery() {
         headers: {
           Authorization: `Client-ID ${accessKey}`,
         },
+        
       });
       const data = await response.json();
+       console.log(data);
       setPhotos(data);
+      
     }
     fetchData();
+    
   }, []); /* dependency array // runs the effect only once after the component's first render*/
-
+ 
   return (
     <div>
       <div className="m-4 mb-15 cursor-pointer">
@@ -35,11 +39,12 @@ export default function Gallery() {
               key={photo.id}
             >
               <img
-                onClick={() => setSelectedPhoto(photo)}
+                onClick={() => setSelectedPhoto}
                 className="cursor-pointer object-cover w-full rounded-xl transition duration-200 group-hover:shadow-lg"
                 src={photo.urls.small}
                 alt={photo.alt_description}
               ></img>
+              
               {/* deafult: opacity-0 // group-hover: shows when the parents wrapper is hovered*/}
               <button
                 onClick={() => console.log("Save me!")}
@@ -62,3 +67,5 @@ export default function Gallery() {
     </div>
   );
 }
+
+
