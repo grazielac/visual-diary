@@ -9,8 +9,8 @@ export default function GalleryItem({ selectedPhoto, onCloseDialog }) {
         <DialogPanel className="fixed inset-20 border-1 overflow-y-auto bg-amber-100 h-full p-0 rounded-3xl">
           <div className="flex justify-between items-center">
             <div className="flex">
-              <div
-                onClick={close}
+              <div 
+                onClick={onCloseDialog}
                 className="sm:p-2 h-12 w-12 mr-8 hover:bg-amber-200 hover:rounded-xl flex items-center justify-center"
               >
                 <SlArrowLeft className="h-6 w-6 text-black-50 cursor-pointer" />
@@ -37,10 +37,9 @@ export default function GalleryItem({ selectedPhoto, onCloseDialog }) {
           ></img>
           
         </DialogPanel>
-        
       </Dialog>
     </>
 
   );
 }
-console.log("onCloseDialog is:", typeof onCloseDialog);
+// console.log("onCloseDialog is:", typeof onCloseDialog);
