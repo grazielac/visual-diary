@@ -34,15 +34,17 @@ export default function Gallery() {
                 key={photo.id}
               >
                 <img
-                //   onClick={() => setSelectedPhoto(photo)}
+                  //   onClick={() => setSelectedPhoto(photo)}
                   className="cursor-pointer object-cover w-full rounded-xl transition duration-200 group-hover:shadow-lg"
                   src={photo.urls.small}
                   alt={photo.alt_description}
                 ></img>
                 {/* deafult: opacity-0 // group-hover: shows when the parents wrapper is hovered*/}
-                <button className="mt-2 mr-2 h-12 w-16 bg-amber-200 rounded-2xl cursor-pointer absolute top-2 right-2 opacity-0 transition-opacity group-hover:opacity-100">
-                  Save
-                </button>
+                <button 
+                onClick={() => console.log("Save me!")}
+                className="mt-2 mr-2 h-12 w-16 bg-amber-200 rounded-2xl cursor-pointer absolute top-2 right-2 opacity-0 transition-opacity group-hover:opacity-100">
+                    Save
+                </button>    
               </div>
             ))}
           </ul>

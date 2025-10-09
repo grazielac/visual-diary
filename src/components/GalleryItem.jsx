@@ -16,7 +16,12 @@ export default function GalleryItem() {
           <DialogPanel className="bg-amber-100 h-full p-12  rounded-3xl">
             <DialogTitle className="text-lg"></DialogTitle>
             <p>HELLO WORLD</p>
-            
+            <button
+              onClick={() => console.log("Save me!")}
+              className="mt-2 mr-2 h-12 w-16 bg-amber-200 rounded-2xl cursor-pointer absolute top-10 right-10 transition-opacity hover:bg-amber-300"
+            >
+              Save
+            </button>
             <div>
               <button onClick={() => setIsOpen(false)}>Close</button>
             </div>
