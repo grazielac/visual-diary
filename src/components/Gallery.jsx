@@ -3,7 +3,7 @@ import GalleryItem from "./GalleryItem";
 
 export default function Gallery() {
   const [photos, setPhotos] = useState([]);
-  const accessKey = import.env.UNSPLASH_KEY;
+  const accessKey = import.meta.env.UNSPLASH_KEY;
   /*  */
   useEffect(() => {
     /* you only want to fecth data once, when the component first loads */
