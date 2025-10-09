@@ -12,8 +12,8 @@ export default function GalleryItem() {
         onClose={() => setIsOpen(false)}
         className="relative z-50"
       >
-        <div className="fixed inset-1/15 p-4 bg-amber-200 border-1 rounded-xl">
-          <DialogPanel className="bg-amber-300 p-12">
+        <div className="fixed inset-20 p-6 bg-amber-50 border-1 rounded-3xl">
+          <DialogPanel className="bg-amber-100 h-full p-12  rounded-3xl">
             <DialogTitle className="text-lg"></DialogTitle>
             <p>HELLO WORLD</p>
             
