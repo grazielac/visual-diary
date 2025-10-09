@@ -3,11 +3,12 @@ import GalleryItem from "./GalleryItem";
 
 export default function Gallery() {
   const [photos, setPhotos] = useState([]);
-
+  const accessKey = import.env.UNSPLASH_KEY;
+  /*  */
   useEffect(() => {
     /* you only want to fecth data once, when the component first loads */
     async function fetchData() {
-      const response = await fetch("https://api.unsplash.com/");
+      const response = await fetch("https://api.unsplash.com/photos");
       const data = await response.json();
       setPhotos(data);
     }
