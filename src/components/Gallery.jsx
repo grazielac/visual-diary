@@ -3,12 +3,16 @@ import GalleryItem from "./GalleryItem";
 
 export default function Gallery() {
   const [photos, setPhotos] = useState([]);
-  const accessKey = import.meta.env.UNSPLASH_KEY;
-  /*  */
+  const accessKey = import.meta.env.VITE_UNSPLASH_KEY;
+  /* source: chatgpt - Vite requires all frontend env variables to start with VITE_ */
   useEffect(() => {
     /* you only want to fecth data once, when the component first loads */
     async function fetchData() {
-      const response = await fetch("https://api.unsplash.com/photos");
+      const response = await fetch("https://api.unsplash.com/photos", {
+        headers: {
+            Authorization: `Client-ID ${accessKey}`,
+        },
+    });
       const data = await response.json();
       setPhotos(data);
     }
