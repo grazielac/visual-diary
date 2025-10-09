@@ -7,7 +7,7 @@ export default function Gallery() {
   useEffect(() => {
     /* you only want to fecth data once, when the component first loads */
     async function fetchData() {
-      const response = await fetch("https://week-6-api.vercel.app/api/images");
+      const response = await fetch("https://api.unsplash.com/");
       const data = await response.json();
       setPhotos(data);
     }
