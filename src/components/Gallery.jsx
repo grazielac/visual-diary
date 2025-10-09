@@ -34,15 +34,15 @@ export default function Gallery() {
         <ul className="grid grid-cols-4 md:grid-cols-6 gap-4">
           {photos.map((photo) => (
             /* for each photo, render an img with its src and key to id*/
-            <div
+            <li
               className="relative group transition duration-200"
               key={photo.id}
             >
               <img
-                onClick={() => setSelectedPhoto}
+                onClick={() => setSelectedPhoto(photo)}
                 className="cursor-pointer object-cover w-full rounded-xl transition duration-200 group-hover:shadow-lg"
                 src={photo.urls.small}
-                alt={photo.alt_description}
+                alt={photo.alt_description || "Unsplash photo"}
               ></img>
               
               {/* deafult: opacity-0 // group-hover: shows when the parents wrapper is hovered*/}
@@ -52,7 +52,7 @@ export default function Gallery() {
               >
                 Save
               </button>
-            </div>
+            </li>
           ))}
         </ul>
         {/* call modal?? GalleryItem??*/}
@@ -61,7 +61,7 @@ export default function Gallery() {
       {selectedPhoto && (
         <GalleryItem
           selectedPhoto={selectedPhoto}
-          close={() => setSelectedPhoto(null)}
+          onCloseDialog={() => setSelectedPhoto(null)}
         />
       )}
     </div>
