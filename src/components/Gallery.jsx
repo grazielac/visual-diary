@@ -32,7 +32,7 @@ export default function Gallery() {
         <h1 className="underline text-center">Photos</h1>
       </div>
       <div className="relative m-5">
-        <ul className="grid grid-cols-4 md:grid-cols-6 gap-4">
+        <ul className="m-5 columns-2 md:columns-3 lg:columns-4 gap-4">
           {photos.map((photo) => (
             /* for each photo, render an img with its src and key to id*/
             <li
@@ -41,7 +41,7 @@ export default function Gallery() {
             >
               <img
                 onClick={() => setSelectedPhoto(photo)}
-                className="cursor-pointer object-cover w-full rounded-xl transition duration-200 group-hover:shadow-lg"
+                className="hover:opacity-80 mb-4 cursor-pointer object-cover w-full rounded-xl transition duration-200 group-hover:shadow-lg"
                 src={photo.urls.small}
                 alt={photo.alt_description || "Unsplash photo"}
               ></img>
