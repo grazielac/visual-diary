@@ -3,16 +3,14 @@ import { SlArrowLeft, SlArrowRight, SlHeart } from "react-icons/sl";
 import { SlBubble } from "react-icons/sl";
 
 export default function GalleryItem({ selectedPhoto, onCloseDialog }) {
+
   return (
     <>
       <Dialog open={true} onClose={onCloseDialog} className="relative z-50">
         <DialogPanel className="flex flex-col fixed inset-20 border-1 border-gray-300 bg-amber-50 h-4/5 rounded-3xl">
           <div className="flex justify-between items-center mt-8 mr-10 ml-10">
             <div className="flex">
-              <div
-                onClick={onCloseDialog}
-                className="sm:p-2 h-12 w-12 mr-8 hover:bg-amber-200 hover:rounded-xl flex items-center justify-center"
-              >
+              <div className="sm:p-2 h-12 w-12 mr-8 hover:bg-amber-200 hover:rounded-xl flex items-center justify-center">
                 <SlArrowLeft className="h-6 w-6 text-black-50 cursor-pointer" />
               </div>
             </div>
@@ -39,18 +37,17 @@ export default function GalleryItem({ selectedPhoto, onCloseDialog }) {
             </div>
             <DialogTitle className="text-lg"></DialogTitle>
             <div className="flex justify-center pt-15 2xl:max-h-60">
-              {/* <div className="flex flex-row items-center">
-              <SlArrowLeft 
-                className="h-6 w-6 text-black-50 cursor-pointer" />
-            </div> */}
+              <div className="flex flex-row items-center">
+                <SlArrowLeft className="h-6 w-6 text-black-50 cursor-pointer" />
+              </div>
               <img
                 className=" sm:h-5/6 rounded-3xl"
                 src={selectedPhoto?.urls?.small}
                 alt={selectedPhoto?.alt_description}
               ></img>
-              {/* <div className="flex flex-row items-center">
-            <SlArrowRight className="h-6 w-6 text-black-50 cursor-pointer" />
-            </div> */}
+              <div className="flex flex-row items-center">
+                <SlArrowRight className="h-6 w-6 text-black-50 cursor-pointer" />
+              </div>
             </div>
 
             {/* COMMENT SECTION */}
