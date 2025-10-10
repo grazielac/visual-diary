@@ -1,16 +1,40 @@
-# React + Vite
+# The Visual Diary
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive photo gallery built with **React**, styled with **Tailwind CSS**, and powered by the **Unsplash API**.  
+The gallery uses a **masonry layout** (like Pinterest) and includes a **modal viewer** with navigation for a smooth photo-browsing experience.
 
-Currently, two official plugins are available:
+![Demo Screenshot](/src/assets/demo.png)
+![Live Demo](https://visual-diary-jn75.onrender.com)
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- Fetches high-quality images from the Unsplash API  
+- Masonry layout using CSS columns (Pinterest-like look)  
+- Click to view image in a modal 
+- Deployable to Render
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** (Vite)  
+- **Tailwind CSS**  
+- **Headless UI** (for modal Dialog)  
+- **React Icons** (for navigation buttons)  
+- **Unsplash API** (for image data)
+
+---
+
+## 📂 Source
+#### React icons:
+https://react-icons.github.io/react-icons/icons/sl/
+
+#### TailwindCSS
+https://nerdcave.com/tailwind-cheat-sheet 
+
+#### Masonry Layout
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout
+
+#### fetch and display image from api: 
+https://stackoverflow.com/questions/73678855/fetch-and-display-image-from-api-react
