@@ -17,7 +17,7 @@ export default function GalleryItem({ selectedPhoto, onCloseDialog }) {
             </div>
           </div>
 
-          <div className="border-t-1 border-l-1 border-r-1 border-gray-400 ml-20 mr-125 rounded-2xl h-full">
+          <div className="border-t-1 overflow-scroll border-l-1 border-r-1 border-gray-400 ml-20 mr-125 rounded-2xl h-full">
             <div className="flex mt-5 justify-between mr-8 sticky top-0">
               <div className="flex">
                 <div className="mr-5 ml-5 sm:p-2 h-12 w-12 flex items-center cursor-pointer justify-center hover:bg-amber-200 hover:rounded-2xl">
