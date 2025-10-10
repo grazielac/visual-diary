@@ -56,16 +56,23 @@ export default function Gallery() {
             </li>
           ))}
         </ul>
+        
         {/* call modal?? GalleryItem??*/}
       </div>
+      
       {/* conditionally render galleryitem */}
       {selectedPhoto && (
         <GalleryItem
           onCloseDialog={() => setSelectedPhoto(null)}
           photos={photos}
+          selectedPhoto={selectedPhoto}
           setSelectedPhoto={setSelectedPhoto}
         />
       )}
+      
     </div>
+    
   );
 }
+
+

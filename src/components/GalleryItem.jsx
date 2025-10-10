@@ -3,7 +3,8 @@ import { SlArrowLeft, SlArrowRight, SlHeart } from "react-icons/sl";
 import { SlBubble } from "react-icons/sl";
 
 export default function GalleryItem({ selectedPhoto, onCloseDialog }) {
-
+  console.log("GalleryItem selectedPhoto in Render:", selectedPhoto);
+  console.log("selectedPhoto:", selectedPhoto);
   return (
     <>
       <Dialog open={true} onClose={onCloseDialog} className="relative z-50">
@@ -16,7 +17,7 @@ export default function GalleryItem({ selectedPhoto, onCloseDialog }) {
             </div>
           </div>
 
-          <div className="border-t-1 border-l-1 border-r-1 border-gray-400 ml-20 mr-125 rounded-2xl h-full overflow-y-auto">
+          <div className="border-t-1 border-l-1 border-r-1 border-gray-400 ml-20 mr-125 rounded-2xl h-full">
             <div className="flex mt-5 justify-between mr-8 sticky top-0">
               <div className="flex">
                 <div className="mr-5 ml-5 sm:p-2 h-12 w-12 flex items-center cursor-pointer justify-center hover:bg-amber-200 hover:rounded-2xl">
@@ -45,6 +46,7 @@ export default function GalleryItem({ selectedPhoto, onCloseDialog }) {
                 src={selectedPhoto?.urls?.small}
                 alt={selectedPhoto?.alt_description}
               ></img>
+
               <div className="flex flex-row items-center">
                 <SlArrowRight className="h-6 w-6 text-black-50 cursor-pointer" />
               </div>

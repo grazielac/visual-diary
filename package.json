@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "home": "."
+    "homepage": "."
   },
   "dependencies": {
     "@headlessui/react": "^2.2.9",
