@@ -10,7 +10,7 @@ export default function Gallery() {
     /* you only want to fecth data once, when the component first loads */
     async function fetchData() {
       const accessKey = import.meta.env.VITE_UNSPLASH_KEY;
-      const response = await fetch("https://api.unsplash.com/photos", {
+      const response = await fetch("https://api.unsplash.com/photos?per_page=30", {
         headers: {
           Authorization: `Client-ID ${accessKey}`,
         },
@@ -30,7 +30,7 @@ export default function Gallery() {
       <div className="m-4 mb-15 cursor-pointer">
         <h1 className="underline text-center">Photos</h1>
       </div>
-      <div className="relative">
+      <div className="relative m-5">
         <ul className="grid grid-cols-4 md:grid-cols-6 gap-4">
           {photos.map((photo) => (
             /* for each photo, render an img with its src and key to id*/
