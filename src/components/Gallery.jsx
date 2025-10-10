@@ -4,7 +4,7 @@ import GalleryItem from "./GalleryItem";
 export default function Gallery() {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
   const [photos, setPhotos] = useState([]);
-
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   /* source: chatgpt - Vite requires all frontend env variables to start with VITE_ */
   useEffect(() => {
@@ -48,7 +48,7 @@ export default function Gallery() {
 
               {/* deafult: opacity-0 // group-hover: shows when the parents wrapper is hovered*/}
               <button
-                onClick={() => console.log("Save me!")}
+                
                 className="mt-2 mr-2 h-12 w-16 bg-amber-200 rounded-2xl cursor-pointer absolute top-2 right-2 opacity-0 transition-opacity group-hover:opacity-100"
               >
                 Save
@@ -66,7 +66,8 @@ export default function Gallery() {
           onCloseDialog={() => setSelectedPhoto(null)}
           photos={photos}
           selectedPhoto={selectedPhoto}
-          setSelectedPhoto={setSelectedPhoto}
+          selectedIndex={selectedIndex}
+          setSelectedIndex={setSelectedIndex}
         />
       )}
       

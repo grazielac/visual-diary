@@ -2,9 +2,27 @@ import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import { SlArrowLeft, SlArrowRight, SlHeart } from "react-icons/sl";
 import { SlBubble } from "react-icons/sl";
 
-export default function GalleryItem({ selectedPhoto, onCloseDialog }) {
-  console.log("GalleryItem selectedPhoto in Render:", selectedPhoto);
-  console.log("selectedPhoto:", selectedPhoto);
+export default function GalleryItem({
+  selectedPhoto,
+  onCloseDialog,
+  setSelectedPhoto,
+  photos,
+  selectedIndex,
+  setSelectedIndex
+}) {
+    const currentPhoto = photos[selectedIndex];
+
+    const leftBtn = () => {
+        if (selectedIndex > 0) {
+            setSelectedIndex(selectedIndex - 1);
+        }
+    };
+    const rightBtn = () => {
+        if (selectedIndex < photos.length - 1) {
+            setSelectedIndex(selectedIndex + 1);
+        }
+    };
+//   console.log("selectedPhoto:", selectedPhoto);
   return (
     <>
       <Dialog open={true} onClose={onCloseDialog} className="relative z-50">
@@ -28,17 +46,17 @@ export default function GalleryItem({ selectedPhoto, onCloseDialog }) {
                 </div>
               </div>
               <div className="flex">
-                <button
-                  onClick={() => console.log("Save me!")}
-                  className="sticky top-0 h-12 w-16 bg-amber-200 rounded-2xl cursor-pointer hover:bg-amber-300"
-                >
+                <button className="sticky top-0 h-12 w-16 bg-amber-200 rounded-2xl cursor-pointer hover:bg-amber-300">
                   Save
                 </button>
               </div>
             </div>
             <DialogTitle className="text-lg"></DialogTitle>
             <div className="flex justify-center pt-15 2xl:max-h-60">
-              <div className="flex flex-row items-center">
+              <div
+                onClick={leftBtn}
+                className="flex flex-row items-center"
+              >
                 <SlArrowLeft className="h-6 w-6 text-black-50 cursor-pointer" />
               </div>
               <img
@@ -47,7 +65,9 @@ export default function GalleryItem({ selectedPhoto, onCloseDialog }) {
                 alt={selectedPhoto?.alt_description}
               ></img>
 
-              <div className="flex flex-row items-center">
+              <div 
+              onClick={rightBtn}
+              className="flex flex-row items-center">
                 <SlArrowRight className="h-6 w-6 text-black-50 cursor-pointer" />
               </div>
             </div>
@@ -69,4 +89,3 @@ export default function GalleryItem({ selectedPhoto, onCloseDialog }) {
     </>
   );
 }
-// console.log("onCloseDialog is:", typeof onCloseDialog);
