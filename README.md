@@ -26,15 +26,43 @@ The gallery uses a **masonry layout** (like Pinterest) and includes a **modal vi
 
 ---
 
-## 📂 Source
-#### React icons:
-https://react-icons.github.io/react-icons/icons/sl/
+**Tools:**
+- Git/GitHub
+- Render (deployment)
 
-#### TailwindCSS
-https://nerdcave.com/tailwind-cheat-sheet 
+---
 
-#### Masonry Layout
-https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout
+## Getting Started
 
-#### fetch and display image from api: 
-https://stackoverflow.com/questions/73678855/fetch-and-display-image-from-api-react
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/project-name.git
+cd project-name
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Set up environment variables. Create a `.env.local` file with:
+```bash
+touch .env
+```
+VITE_UNSPLASH_KEY=VihFFOb4DCiFiH1lvJEakeY4OHQIrwZ5knQOwgocckw
+
+4. Run the development server
+```bash
+npm run dev
+```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+
+
+## License
+
+MIT License 
+
