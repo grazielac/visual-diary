@@ -5,7 +5,7 @@ The gallery uses a **masonry layout** (like Pinterest) and includes a **modal vi
 
 ![Demo Screenshot](/src/assets/demo.png)
 
-![Live Demo]([https://visual-diary-jn75.onrender.com]
+🔗 **[Live Demo](https://visual-diary-jn75.onrender.com)**
 ---
 
 ## 🚀 Features
