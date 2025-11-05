@@ -4,7 +4,8 @@ A responsive photo gallery built with **React**, styled with **Tailwind CSS**, a
 The gallery uses a **masonry layout** (like Pinterest) and includes a **modal viewer** with navigation for a smooth photo-browsing experience.
 
 ![Demo Screenshot](/src/assets/demo.png)
-![Live Demo](https://visual-diary-jn75.onrender.com)
+
+![Live Demo]([https://visual-diary-jn75.onrender.com]
 ---
 
 ## 🚀 Features
